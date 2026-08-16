@@ -3,11 +3,224 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home">
-  <section class="max-w-5xl mx-auto px-6 py-24 text-center">
-    <h1 class="font-serif text-5xl md:text-6xl text-navy mb-4">Scott A. Lund</h1>
-    <p class="text-burgundy tracking-widest uppercase text-sm mb-8">YA Fantasy Author</p>
-    <p class="text-navy/70 italic text-lg max-w-xl mx-auto">
+
+  <!-- ================================================
+    HERO
+  ================================================ -->
+  <section class="bg-navy text-cream text-center px-6 py-24 md:py-32">
+    <p class="text-burgundy-light tracking-widest uppercase text-xs mb-6">
+      YA Fantasy · The Land of Boondoggle Series
+    </p>
+    <h1 class="font-serif text-5xl md:text-7xl mb-6 leading-tight">
+      Scott A. Lund
+    </h1>
+    <p class="font-serif italic text-xl md:text-2xl text-cream/80 max-w-xl mx-auto mb-10">
       "Let's see what was happening in the Land of Boondoggle…"
     </p>
+    <!-- Preorder CTA — hidden until links are ready; remove the `hidden` class to show -->
+    <div class="hidden flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="#"
+        class="inline-block bg-burgundy hover:bg-burgundy-light text-cream font-sans font-bold tracking-widest uppercase text-sm px-8 py-4 transition-colors"
+      >
+        Preorder Now
+      </a>
+    </div>
   </section>
+
+
+  <!-- ================================================
+    WELCOME / AUTHOR VOICE
+  ================================================ -->
+  <section class="bg-cream px-6 py-20 md:py-28">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-serif text-3xl md:text-4xl text-navy mb-8">Welcome</h2>
+      <div class="font-sans text-navy/80 text-lg leading-relaxed space-y-5 text-left md:text-center">
+        <p>Pull up a chair by the fire and stay awhile.</p>
+        <p>
+          For forty years I've been telling stories — first to my daughters at bedtime, then to
+          anyone who would listen. When my girls were young and wrestling with something in their
+          lives — feeling left out, a first heartbreak, the hard questions about death — I'd fold
+          it into that night's story, and together we'd travel to a place where those things could
+          be faced, and understood, and survived. That place became the Land of Boondoggle.
+        </p>
+        <p>These stories grew up alongside my daughters. Now they're ready to leave home.</p>
+        <p class="font-serif italic text-navy text-xl pt-2">
+          "Let's see what was happening in the Land of Boondoggle…"
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+    BOOKS
+  ================================================ -->
+  <section class="bg-cream-dark px-6 py-20 md:py-28">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-serif text-3xl md:text-4xl text-navy text-center mb-4">The Books</h2>
+      <p class="text-center text-navy/60 text-sm tracking-widest uppercase mb-14">
+        The Land of Boondoggle Series
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+
+        <!-- Book One -->
+        <div class="flex flex-col items-center text-center gap-5">
+          <img
+            src="/images/book-one-cover.png"
+            alt="The Land of Boondoggle — Book One cover"
+            class="w-48 md:w-56 shadow-lg rounded-sm"
+          />
+          <div>
+            <p class="text-burgundy tracking-widest uppercase text-xs mb-2">Book One</p>
+            <h3 class="font-serif text-2xl text-navy mb-3">The Land of Boondoggle</h3>
+            <p class="text-navy/60 text-sm mb-5">
+              Synopsis coming soon. Releasing late Q4 2026.
+            </p>
+            <a
+              href="/books/the-land-of-boondoggle"
+              class="inline-block border border-navy text-navy hover:bg-navy hover:text-cream font-sans text-xs tracking-widest uppercase px-6 py-3 transition-colors"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <!-- Book Two -->
+        <div class="flex flex-col items-center text-center gap-5">
+          <img
+            src="/images/book-two-cover.png"
+            alt="Heirs of The Gorilla King — Book Two cover"
+            class="w-48 md:w-56 shadow-lg rounded-sm"
+          />
+          <div>
+            <p class="text-burgundy tracking-widest uppercase text-xs mb-2">Book Two</p>
+            <h3 class="font-serif text-2xl text-navy mb-3">Heirs of The Gorilla King</h3>
+            <p class="text-navy/60 text-sm mb-5 max-w-sm mx-auto">
+              In a kingdom ruled by three brother Kings, a fragile peace holds sway — and whispers
+              of ancient magic linger in the air.
+            </p>
+            <a
+              href="/books/heirs-of-the-gorilla-king"
+              class="inline-block border border-navy text-navy hover:bg-navy hover:text-cream font-sans text-xs tracking-widest uppercase px-6 py-3 transition-colors"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+    ENDORSEMENTS — hidden until real blurbs arrive
+    To show: remove the `hidden` class from the <section> tag
+  ================================================ -->
+  <section class="hidden bg-navy text-cream px-6 py-20 md:py-28">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-serif text-3xl md:text-4xl text-center mb-14">What Readers Are Saying</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        {/* Blurb template — duplicate this block for each endorsement */}
+        <blockquote class="flex flex-col gap-4">
+          <p class="font-serif italic text-cream/90 text-lg leading-relaxed">
+            "Quote text here — vivid, specific praise for the book."
+          </p>
+          <footer>
+            <p class="font-sans font-bold text-cream text-sm tracking-wide">— REVIEWER NAME</p>
+            <p class="font-sans text-cream/60 text-xs">Author of Their Book</p>
+          </footer>
+        </blockquote>
+
+        <blockquote class="flex flex-col gap-4">
+          <p class="font-serif italic text-cream/90 text-lg leading-relaxed">
+            "Quote text here — vivid, specific praise for the book."
+          </p>
+          <footer>
+            <p class="font-sans font-bold text-cream text-sm tracking-wide">— REVIEWER NAME</p>
+            <p class="font-sans text-cream/60 text-xs">Author of Their Book</p>
+          </footer>
+        </blockquote>
+
+        <blockquote class="flex flex-col gap-4">
+          <p class="font-serif italic text-cream/90 text-lg leading-relaxed">
+            "Quote text here — vivid, specific praise for the book."
+          </p>
+          <footer>
+            <p class="font-sans font-bold text-cream text-sm tracking-wide">— REVIEWER NAME</p>
+            <p class="font-sans text-cream/60 text-xs">Author of Their Book</p>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+    NEWSLETTER SIGNUP
+  ================================================ -->
+  <section class="bg-cream px-6 py-20 md:py-28">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">Stay in the Story</h2>
+      <p class="text-navy/70 mb-8 leading-relaxed">
+        Sign up for updates from the Land of Boondoggle — release news, exclusive excerpts,
+        and the occasional bedtime story from Scott himself.
+      </p>
+      <form
+        class="flex flex-col sm:flex-row gap-3"
+        onsubmit="return false;"
+        aria-label="Newsletter signup"
+      >
+        <input
+          type="email"
+          placeholder="your@email.com"
+          required
+          class="flex-1 px-4 py-3 border border-navy/30 bg-white text-navy placeholder-navy/40 focus:outline-none focus:border-burgundy font-sans text-sm"
+        />
+        <button
+          type="submit"
+          class="bg-burgundy hover:bg-burgundy-light text-cream font-sans font-bold tracking-widest uppercase text-xs px-8 py-3 transition-colors whitespace-nowrap"
+        >
+          Subscribe
+        </button>
+      </form>
+      <p class="text-navy/40 text-xs mt-4">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+    ABOUT TEASER
+  ================================================ -->
+  <section class="bg-cream-dark px-6 py-20 md:py-28">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+
+      <img
+        src="/images/author-portrait.jpg"
+        alt="Scott A. Lund, author"
+        class="w-48 md:w-60 rounded-sm shadow-lg flex-shrink-0 object-cover object-top aspect-square"
+      />
+
+      <div class="text-center md:text-left">
+        <h2 class="font-serif text-3xl md:text-4xl text-navy mb-6">About the Author</h2>
+        <p class="text-navy/70 leading-relaxed mb-8">
+          Scott A. Lund is a storyteller by nature — writing poems, stories, and songs for forty years.
+          The Land of Boondoggle began as bedtime stories told to his daughters, growing over the years
+          into a richly detailed world of magic, family, and the challenges we all face growing up.
+        </p>
+        <a
+          href="/about"
+          class="inline-block border border-navy text-navy hover:bg-navy hover:text-cream font-sans text-xs tracking-widest uppercase px-8 py-3 transition-colors"
+        >
+          Meet Scott
+        </a>
+      </div>
+
+    </div>
+  </section>
+
 </Layout>
