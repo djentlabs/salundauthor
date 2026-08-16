@@ -33,22 +33,32 @@ import Layout from '../layouts/Layout.astro';
     WELCOME / AUTHOR VOICE
   ================================================ -->
   <section class="bg-cream px-6 py-20 md:py-28">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="font-serif text-3xl md:text-4xl text-navy mb-8">Welcome</h2>
-      <div class="font-sans text-navy/80 text-lg leading-relaxed space-y-5 text-left md:text-center">
-        <p>Pull up a chair by the fire and stay awhile.</p>
-        <p>
-          For forty years I've been telling stories — first to my daughters at bedtime, then to
-          anyone who would listen. When my girls were young and wrestling with something in their
-          lives — feeling left out, a first heartbreak, the hard questions about death — I'd fold
-          it into that night's story, and together we'd travel to a place where those things could
-          be faced, and understood, and survived. That place became the Land of Boondoggle.
-        </p>
-        <p>These stories grew up alongside my daughters. Now they're ready to leave home.</p>
-        <p class="font-serif italic text-navy text-xl pt-2">
-          "Let's see what was happening in the Land of Boondoggle…"
-        </p>
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+
+      <img
+        src="/images/author-portrait.jpg"
+        alt="Scott A. Lund, author"
+        class="w-48 md:w-64 rounded-sm shadow-lg flex-shrink-0 object-cover object-top aspect-[3/4]"
+      />
+
+      <div>
+        <h2 class="font-serif text-3xl md:text-4xl text-navy mb-8 text-center md:text-left">Welcome</h2>
+        <div class="font-sans text-navy/80 text-lg leading-relaxed space-y-5">
+          <p>Pull up a chair by the fire and stay awhile.</p>
+          <p>
+            For forty years I've been telling stories — first to my daughters at bedtime, then to
+            anyone who would listen. When my girls were young and wrestling with something in their
+            lives — feeling left out, a first heartbreak, the hard questions about death — I'd fold
+            it into that night's story, and together we'd travel to a place where those things could
+            be faced, and understood, and survived. That place became the Land of Boondoggle.
+          </p>
+          <p>These stories grew up alongside my daughters. Now they're ready to leave home.</p>
+          <p class="font-serif italic text-navy text-xl pt-2">
+            "Let's see what was happening in the Land of Boondoggle…"
+          </p>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -197,29 +207,19 @@ import Layout from '../layouts/Layout.astro';
     ABOUT TEASER
   ================================================ -->
   <section class="bg-cream-dark px-6 py-20 md:py-28">
-    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
-
-      <img
-        src="/images/author-portrait.jpg"
-        alt="Scott A. Lund, author"
-        class="w-48 md:w-60 rounded-sm shadow-lg flex-shrink-0 object-cover object-top aspect-square"
-      />
-
-      <div class="text-center md:text-left">
-        <h2 class="font-serif text-3xl md:text-4xl text-navy mb-6">About the Author</h2>
-        <p class="text-navy/70 leading-relaxed mb-8">
-          Scott A. Lund is a storyteller by nature — writing poems, stories, and songs for forty years.
-          The Land of Boondoggle began as bedtime stories told to his daughters, growing over the years
-          into a richly detailed world of magic, family, and the challenges we all face growing up.
-        </p>
-        <a
-          href="/about"
-          class="inline-block border border-navy text-navy hover:bg-navy hover:text-cream font-sans text-xs tracking-widest uppercase px-8 py-3 transition-colors"
-        >
-          Meet Scott
-        </a>
-      </div>
-
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-serif text-3xl md:text-4xl text-navy mb-6">About the Author</h2>
+      <p class="text-navy/70 leading-relaxed mb-8">
+        Scott A. Lund is a storyteller by nature — writing poems, stories, and songs for forty years.
+        The Land of Boondoggle began as bedtime stories told to his daughters, growing over the years
+        into a richly detailed world of magic, family, and the challenges we all face growing up.
+      </p>
+      <a
+        href="/about"
+        class="inline-block border border-navy text-navy hover:bg-navy hover:text-cream font-sans text-xs tracking-widest uppercase px-8 py-3 transition-colors"
+      >
+        Meet Scott
+      </a>
     </div>
   </section>
 
