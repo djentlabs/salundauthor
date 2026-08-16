@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="The Land of Boondoggle"
+  description="The Land of Boondoggle — Book One of the series by Scott A. Lund. Releasing late Q4 2026."
+>
+
+  <!-- Page Header -->
+  <section class="bg-navy text-cream px-6 py-16 md:py-20 text-center">
+    <p class="text-burgundy-light tracking-widest uppercase text-xs mb-4">Book One</p>
+    <h1 class="font-serif text-4xl md:text-5xl">The Land of Boondoggle</h1>
+    <p class="font-sans text-cream/60 mt-4 text-sm tracking-wide">by Scott A. Lund</p>
+  </section>
+
+
+  <!-- Book detail -->
+  <section class="bg-cream px-6 py-20 md:py-28">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+
+      <!-- Cover -->
+      <div class="flex-shrink-0 flex flex-col items-center gap-4">
+        <img
+          src="/images/book-one-cover.png"
+          alt="The Land of Boondoggle — Book One cover"
+          class="w-48 md:w-64 shadow-xl rounded-sm"
+        />
+
+        <!-- Preorder buttons — hidden until links are ready
+             To show: remove `hidden`, replace # with real retailer links -->
+        <div class="hidden flex-col gap-3 w-full max-w-xs mt-2">
+          <a href="#" class="block text-center bg-burgundy hover:bg-burgundy-light text-cream font-sans font-bold tracking-widest uppercase text-xs px-6 py-3 transition-colors">
+            Preorder on Amazon
+          </a>
+          <a href="#" class="block text-center border border-navy text-navy hover:bg-navy hover:text-cream font-sans font-bold tracking-widest uppercase text-xs px-6 py-3 transition-colors">
+            Barnes &amp; Noble
+          </a>
+          <a href="#" class="block text-center border border-navy text-navy hover:bg-navy hover:text-cream font-sans font-bold tracking-widest uppercase text-xs px-6 py-3 transition-colors">
+            Bookshop.org
+          </a>
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="flex-1">
+        <div class="flex flex-wrap gap-4 mb-8 text-xs tracking-widest uppercase">
+          <span class="bg-burgundy/10 text-burgundy px-3 py-1">YA Fantasy</span>
+          <span class="bg-navy/10 text-navy px-3 py-1">Book One</span>
+          <span class="bg-navy/10 text-navy px-3 py-1">Releasing Q4 2026</span>
+        </div>
+
+        <h2 class="font-serif text-2xl text-navy mb-6">About the Book</h2>
+
+        <!-- Synopsis placeholder — replace with real synopsis when available -->
+        <div class="font-sans text-navy/70 text-lg leading-relaxed space-y-4">
+          <p class="font-serif italic text-navy/50">Synopsis coming soon.</p>
+          <p>
+            Set in the mystical Land of Boondoggle — a world with a history stretching back
+            through generations — this debut novel brings to life the stories Scott A. Lund
+            first told his daughters at bedtime: tales of adventure, belonging, and the
+            challenges we all face growing up.
+          </p>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-navy/10">
+          <p class="font-sans text-navy/50 text-sm">
+            Preorder links will be available as the release date approaches.
+            <a href="/contact" class="text-burgundy hover:underline">Sign up for updates</a> to be notified.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Back to books -->
+  <section class="bg-cream-dark px-6 py-12 text-center">
+    <a
+      href="/books"
+      class="inline-block border border-navy text-navy hover:bg-navy hover:text-cream font-sans text-xs tracking-widest uppercase px-8 py-3 transition-colors"
+    >
+      &larr; All Books
+    </a>
+  </section>
+
+</Layout>

@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Heirs of The Gorilla King"
+  description="Heirs of The Gorilla King — Book Two of the Land of Boondoggle series by Scott A. Lund."
+>
+
+  <!-- Page Header -->
+  <section class="bg-navy text-cream px-6 py-16 md:py-20 text-center">
+    <p class="text-burgundy-light tracking-widest uppercase text-xs mb-4">Book Two</p>
+    <h1 class="font-serif text-4xl md:text-5xl">Heirs of The Gorilla King</h1>
+    <p class="font-sans text-cream/60 mt-4 text-sm tracking-wide">by Scott A. Lund</p>
+  </section>
+
+
+  <!-- Book detail -->
+  <section class="bg-cream px-6 py-20 md:py-28">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+
+      <!-- Cover -->
+      <div class="flex-shrink-0 flex flex-col items-center gap-4">
+        <img
+          src="/images/book-two-cover.png"
+          alt="Heirs of The Gorilla King — Book Two cover"
+          class="w-48 md:w-64 shadow-xl rounded-sm"
+        />
+      </div>
+
+      <!-- Details -->
+      <div class="flex-1">
+        <div class="flex flex-wrap gap-4 mb-8 text-xs tracking-widest uppercase">
+          <span class="bg-burgundy/10 text-burgundy px-3 py-1">YA Fantasy</span>
+          <span class="bg-navy/10 text-navy px-3 py-1">Book Two</span>
+          <span class="bg-navy/10 text-navy px-3 py-1">Coming Soon</span>
+        </div>
+
+        <h2 class="font-serif text-2xl text-navy mb-6">About the Book</h2>
+
+        <div class="font-sans text-navy/80 text-lg leading-relaxed space-y-5">
+          <p>
+            In a kingdom ruled by three brother Kings, each with two children, a fragile peace
+            holds sway. Whispers of ancient magic linger in the air, tied to a mystical grove
+            hidden deep within the heart of the realm.
+          </p>
+          <p>
+            But the magic isn't solely confined to mystical hands — cousins descended from the
+            Silverback King wield potential powers long thought lost. Can a bond of blood and
+            magic overcome ancient enmities and a devastating war, or will the Land of Boondoggle
+            falter?
+          </p>
+        </div>
+
+        <blockquote class="border-l-4 border-burgundy pl-6 my-8">
+          <p class="font-serif italic text-navy text-lg leading-relaxed">
+            "Come with us and, 'Let's see what was happening in the Land of Boondoggle!'"
+          </p>
+        </blockquote>
+
+        <div class="mt-6 pt-8 border-t border-navy/10">
+          <p class="font-sans text-navy/50 text-sm">
+            Book Two follows <em>The Land of Boondoggle</em> and is currently in progress.
+            <a href="/contact" class="text-burgundy hover:underline">Stay in touch</a> for updates on the series.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Back to books -->
+  <section class="bg-cream-dark px-6 py-12 text-center">
+    <a
+      href="/books"
+      class="inline-block border border-navy text-navy hover:bg-navy hover:text-cream font-sans text-xs tracking-widest uppercase px-8 py-3 transition-colors"
+    >
+      &larr; All Books
+    </a>
+  </section>
+
+</Layout>
