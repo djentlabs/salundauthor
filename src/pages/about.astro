@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About"
+  description="Meet Scott A. Lund — YA fantasy author and storyteller of the Land of Boondoggle series."
+>
+
+  <!-- Page Header -->
+  <section class="bg-navy text-cream px-6 py-16 md:py-20 text-center">
+    <p class="text-burgundy-light tracking-widest uppercase text-xs mb-4">The Author</p>
+    <h1 class="font-serif text-4xl md:text-5xl">Scott A. Lund</h1>
+  </section>
+
+
+  <!-- Bio + Portrait -->
+  <section class="bg-cream px-6 py-20 md:py-28">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+
+      <!-- Portrait -->
+      <div class="flex-shrink-0 flex flex-col items-center md:items-start gap-4">
+        <div class="w-48 md:w-56 h-64 md:h-72 overflow-hidden rounded-sm shadow-lg">
+          <img
+            src="/images/author-portrait.jpg"
+            alt="Scott A. Lund, author"
+            class="w-full h-full object-cover object-top"
+          />
+        </div>
+        <p class="font-serif italic text-navy/50 text-sm text-center md:text-left">
+          Scott A. Lund
+        </p>
+      </div>
+
+      <!-- Bio text -->
+      <div class="flex-1">
+        <h2 class="font-serif text-2xl md:text-3xl text-navy mb-6">A Storyteller by Nature</h2>
+        <div class="font-sans text-navy/80 text-lg leading-relaxed space-y-5">
+          <p>
+            Scott A. Lund is a storyteller by nature, and he's been writing poems, stories, and
+            songs for the last forty years. In his debut YA fantasy novel, Scott explores the Land
+            of Boondoggle — a mystical land with a history that stretches back through generations.
+          </p>
+          <p>
+            Scott began building the Land of Boondoggle by telling his daughters bedtime stories
+            when they were young. If they were dealing with something in their lives — feeling left
+            out, lying, or even death — Scott would incorporate it into that evening's story,
+            helping his daughters learn to navigate those challenges together.
+          </p>
+          <p>
+            The characters, lands, history, and stories grew over several years, becoming the
+            richly detailed world Boondoggle is today.
+          </p>
+          <p>
+            Each night, they began the same way:
+          </p>
+        </div>
+
+        <!-- Signature tagline as pull quote -->
+        <blockquote class="border-l-4 border-burgundy pl-6 my-8">
+          <p class="font-serif italic text-navy text-xl md:text-2xl leading-relaxed">
+            "Let's see what was happening in the Land of Boondoggle…"
+          </p>
+        </blockquote>
+
+        <p class="font-sans text-navy/80 text-lg leading-relaxed">
+          Now those stories are ready to leave home.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Divider / Series CTA -->
+  <section class="bg-cream-dark px-6 py-20 md:py-24">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-serif text-2xl md:text-3xl text-navy mb-4">The Land of Boondoggle Series</h2>
+      <p class="text-navy/70 leading-relaxed mb-8">
+        Two books. One world forty years in the making. Explore the series.
+      </p>
+      <a
+        href="/books"
+        class="inline-block bg-burgundy hover:bg-burgundy-light text-cream font-sans font-bold tracking-widest uppercase text-xs px-10 py-4 transition-colors"
+      >
+        See the Books
+      </a>
+    </div>
+  </section>
+
+</Layout>
