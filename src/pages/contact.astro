@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { socialLinks } from '../data/socialLinks.js';
+---
+
+<Layout
+  title="Contact"
+  description="Get in touch with Scott A. Lund, author of the Land of Boondoggle series."
+>
+
+  <!-- Page Header -->
+  <section class="bg-navy text-cream px-6 py-16 md:py-20 text-center">
+    <p class="text-burgundy-light tracking-widest uppercase text-xs mb-4">Get in Touch</p>
+    <h1 class="font-serif text-4xl md:text-5xl">Contact</h1>
+  </section>
+
+
+  <!-- Email + Social -->
+  <section class="bg-cream px-6 py-20 md:py-28">
+    <div class="max-w-xl mx-auto text-center">
+      <p class="font-serif italic text-navy text-xl leading-relaxed mb-10">
+        I'd love to hear from you — whether it's a question, a bit of feedback, or just to say hello.
+      </p>
+
+      <a
+        href="mailto:salundauthor@gmail.com"
+        class="inline-block font-serif text-2xl md:text-3xl text-navy hover:text-burgundy transition-colors mb-14 break-all"
+      >
+        salundauthor@gmail.com
+      </a>
+
+      <ul class="flex justify-center gap-6">
+        {socialLinks.map(link => (
+          <li>
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.label}
+              class="inline-flex items-center justify-center w-12 h-12 rounded-full border border-navy/20 text-navy hover:border-burgundy hover:text-burgundy transition-colors"
+              set:html={link.icon}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+</Layout>
