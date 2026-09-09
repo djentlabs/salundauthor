@@ -45,15 +45,17 @@ import PreorderButton from '../../components/PreorderButton.astro';
 
       <!-- Details -->
       <div class="flex-1">
-        <div class="flex flex-wrap gap-4 mb-8 text-xs tracking-widest uppercase">
+        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-8 text-xs tracking-widest uppercase">
           <span class="bg-burgundy/10 text-burgundy px-3 py-1">YA Fantasy</span>
           <span class="bg-navy/10 text-navy px-3 py-1">Book One</span>
           <span class="bg-navy/10 text-navy px-3 py-1">Releasing Q4 2026</span>
         </div>
 
-        <h2 class="font-serif text-2xl text-navy mb-6">About the Book</h2>
+        <h2 class="font-serif text-2xl text-navy mb-6 text-center md:text-left">About the Book</h2>
 
-        <PreorderButton class="mb-8" />
+        <div class="text-center md:text-left mb-8">
+          <PreorderButton />
+        </div>
 
         <div class="font-sans text-navy/70 text-lg leading-relaxed space-y-4">
           <p>
