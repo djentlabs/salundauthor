@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PreorderButton from '../components/PreorderButton.astro';
 ---
 
 <Layout title="Home">
@@ -17,15 +18,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="font-serif italic text-xl md:text-2xl text-cream/80 max-w-xl mx-auto mb-10">
       "Let's see what was happening in the Land of Boondoggle…"
     </p>
-    <!-- Preorder CTA — hidden until links are ready; remove the `hidden` class to show -->
-    <div class="hidden flex-col sm:flex-row gap-4 justify-center">
-      <a
-        href="#"
-        class="inline-block bg-burgundy hover:bg-burgundy-light text-cream font-sans font-bold tracking-widest uppercase text-sm px-8 py-4 transition-colors"
-      >
-        Preorder Now
-      </a>
-    </div>
+    <PreorderButton />
   </section>
 
 
