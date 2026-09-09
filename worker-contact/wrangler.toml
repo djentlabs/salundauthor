@@ -1,0 +1,7 @@
+name = "salundauthor-contact"
+main = "src/index.js"
+compatibility_date = "2026-09-06"
+
+[[send_email]]
+name = "SEND_EMAIL"
+destination_address = "salundauthor@gmail.com"

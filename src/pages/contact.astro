@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { socialLinks } from '../data/socialLinks.js';
+
+const CONTACT_WORKER_URL = 'https://salundauthor-contact.djentlabs.workers.dev';
+const TURNSTILE_SITE_KEY = '0x4AAAAAAEqh4L81yJpkM9Tb';
 ---
 
 <Layout
@@ -10,24 +13,72 @@ import { socialLinks } from '../data/socialLinks.js';
 
   <!-- Page Header -->
   <section class="bg-navy text-cream px-6 py-16 md:py-20 text-center">
-    <p class="text-burgundy-light tracking-widest uppercase text-xs mb-4">Get in Touch</p>
+    <p class="text-cream-dark tracking-widest uppercase text-xs mb-4">Get in Touch</p>
     <h1 class="font-serif text-4xl md:text-5xl">Contact</h1>
   </section>
 
 
-  <!-- Email + Social -->
+  <!-- Contact form + Social -->
   <section class="bg-cream px-6 py-20 md:py-28">
     <div class="max-w-xl mx-auto text-center">
       <p class="font-serif italic text-navy text-xl leading-relaxed mb-10">
         I'd love to hear from you — whether it's a question, a bit of feedback, or just to say hello.
       </p>
 
-      <a
-        href="mailto:salundauthor@gmail.com"
-        class="inline-block font-serif text-2xl md:text-3xl text-navy hover:text-burgundy transition-colors mb-14 break-all"
+      <p data-status="sent" hidden class="bg-navy/5 border border-navy/20 text-navy text-sm px-5 py-4 mb-8 text-left">
+        Thanks for reaching out! Your message is on its way — I'll get back to you soon.
+      </p>
+      <p data-status="error" hidden class="bg-burgundy/10 border border-burgundy/30 text-burgundy text-sm px-5 py-4 mb-8 text-left">
+        Something went wrong sending your message. Please try again in a moment.
+      </p>
+
+      <form
+        method="POST"
+        action={CONTACT_WORKER_URL}
+        class="text-left flex flex-col gap-5 mb-14"
       >
-        salundauthor@gmail.com
-      </a>
+        <div class="flex flex-col gap-1.5">
+          <label for="name" class="text-navy/70 text-xs tracking-widest uppercase">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="px-4 py-3 border border-navy/30 bg-white text-navy placeholder-navy/40 focus:outline-none focus:border-burgundy font-sans text-sm"
+          />
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label for="email" class="text-navy/70 text-xs tracking-widest uppercase">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="px-4 py-3 border border-navy/30 bg-white text-navy placeholder-navy/40 focus:outline-none focus:border-burgundy font-sans text-sm"
+          />
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label for="message" class="text-navy/70 text-xs tracking-widest uppercase">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="px-4 py-3 border border-navy/30 bg-white text-navy placeholder-navy/40 focus:outline-none focus:border-burgundy font-sans text-sm resize-y"
+          ></textarea>
+        </div>
+
+        <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY}></div>
+
+        <button
+          type="submit"
+          class="self-start bg-burgundy hover:bg-burgundy-light text-cream font-sans font-bold tracking-widest uppercase text-xs px-8 py-3 transition-colors"
+        >
+          Send Message
+        </button>
+      </form>
 
       <ul class="flex justify-center gap-6">
         {socialLinks.map(link => (
@@ -45,5 +96,15 @@ import { socialLinks } from '../data/socialLinks.js';
       </ul>
     </div>
   </section>
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>
+  <script is:inline>
+    const params = new URLSearchParams(window.location.search);
+    const status = params.has('sent') ? 'sent' : params.has('error') ? 'error' : null;
+    if (status) {
+      document.querySelector(`[data-status="${status}"]`)?.removeAttribute('hidden');
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  </script>
 
 </Layout>
