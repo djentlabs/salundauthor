@@ -1,0 +1,20 @@
+---
+interface Props {
+  href?: string;
+  class?: string;
+}
+
+const {
+  href = 'https://share.google/WffFbJr5f84mGLUGt',
+  class: className = '',
+} = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={`inline-block bg-burgundy hover:bg-burgundy-light text-cream font-sans font-bold tracking-widest uppercase text-sm px-8 py-4 transition-colors ${className}`}
+>
+  Pre-Order
+</a>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PreorderButton from '../../components/PreorderButton.astro';
 ---
 
 <Layout
@@ -17,7 +18,7 @@ import Layout from '../../layouts/Layout.astro';
 
   <!-- Book detail -->
   <section class="bg-cream px-6 py-20 md:py-28">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-center md:items-start">
 
       <!-- Cover -->
       <div class="flex-shrink-0 flex flex-col items-center gap-4">
@@ -52,21 +53,33 @@ import Layout from '../../layouts/Layout.astro';
 
         <h2 class="font-serif text-2xl text-navy mb-6">About the Book</h2>
 
-        <!-- Synopsis placeholder — replace with real synopsis when available -->
+        <PreorderButton class="mb-8" />
+
         <div class="font-sans text-navy/70 text-lg leading-relaxed space-y-4">
-          <p class="font-serif italic text-navy/50">Synopsis coming soon.</p>
           <p>
-            Set in the mystical Land of Boondoggle — a world with a history stretching back
-            through generations — this debut novel brings to life the stories Scott A. Lund
-            first told his daughters at bedtime: tales of adventure, belonging, and the
-            challenges we all face growing up.
+            In a land ruled by three brother kings, a fragile peace holds sway. It is all their
+            children have known. But when twelve-year-old Trudy, her younger sister Judy, and
+            their cousins befriend the Watcher, the treaty with the North—secured years before
+            by their grandfather, the Silverback King—is already beginning to fray.
+          </p>
+          <p>
+            Whispers of ancient magick linger in the air across the kingdom of Boondoggle, amidst
+            legends of the last dragon and the young man who gained her trust. Sorcerers,
+            luchorpáin, and other creatures thrive in a mystical grove hidden deep within the
+            heart of the realm. But as Trudy and her cousins discover the mystical wonders of
+            their own land, the threat of war continues to grow.
+          </p>
+          <p>
+            With their home and countless creatures in danger, the kings must call on old
+            alliances—little knowing that some of their own children wield potential powers long
+            thought lost. Can a bond of blood and magick overcome ancient enmities and a
+            devastating war, or will the land of Boondoggle faulter?
           </p>
         </div>
 
         <div class="mt-10 pt-8 border-t border-navy/10">
           <p class="font-sans text-navy/50 text-sm">
-            Preorder links will be available as the release date approaches.
-            <a href="/contact" class="text-burgundy hover:underline">Sign up for updates</a> to be notified.
+            Preorder links will be available as the release date approaches. <a href="/contact" class="text-burgundy hover:underline">Sign up for updates</a> to be notified.
           </p>
         </div>
       </div>
